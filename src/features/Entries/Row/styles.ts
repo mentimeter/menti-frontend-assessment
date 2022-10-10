@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TextWrap } from "../../../lib/mixins";
+import styled from 'styled-components';
+import { TextWrap } from '../../../lib/mixins';
 
 export const Actions = styled.div`
   opacity: 0;
@@ -35,8 +35,10 @@ export const Content = styled.div`
   position: relative;
   cursor: pointer;
 
+  display: flex;
+
   &.published::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: -1rem;
@@ -44,6 +46,21 @@ export const Content = styled.div`
     height: 100%;
     background-color: ${({ theme }) => theme.colors.green};
   }
+`;
+
+export const ContentImage = styled.div`
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #eee;
+  border-radius: 50%;
+`;
+
+export const ContentInnerWrapper = styled.div`
+  flex: 1;
+  margin-left: 1.6rem;
 `;
 
 export const Heading = styled.div`

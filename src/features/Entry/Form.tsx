@@ -1,14 +1,15 @@
-import type { FormikHelpers } from "formik";
-import { useState } from "react";
-import { Formik, Form as FormikForm } from "formik";
-import { TextField } from "../../components/TextField/TextField";
-import { Button, FormRow, Buttons, ErrorMessage } from "./styles";
-import { validationSchema } from "./constants";
+import type { FormikHelpers } from 'formik';
+import { useState } from 'react';
+import { Formik, Form as FormikForm } from 'formik';
+import { TextField } from '../../components/TextField/TextField';
+import { Button, FormRow, Buttons, ErrorMessage } from './styles';
+import { validationSchema } from './constants';
 
 export interface FormFields {
   id: string;
   isPublished: boolean;
   title: string;
+  imageUrl?: string;
   description: string;
 }
 
@@ -29,18 +30,18 @@ export const Form = ({
   isLoadingRemove,
   isLoadingPublish,
 }: Props) => {
-  const [submitError, setSubmitError] = useState("");
+  const [submitError, setSubmitError] = useState('');
 
   const handleSubmit = async (
     values: FormFields,
-    { setSubmitting }: FormikHelpers<FormFields>
+    { setSubmitting }: FormikHelpers<FormFields>,
   ) => {
     setSubmitting(true);
     try {
       await onSubmit(values);
     } catch (error) {
       setSubmitError(
-        error?.message || "Something went wrong, please try again"
+        error?.message || 'Something went wrong, please try again',
       );
     }
     setSubmitting(false);
@@ -60,6 +61,7 @@ export const Form = ({
             <TextField label="Id" name="id" disabled />
           </FormRow>
           <TextField label="Description" name="description" />
+          <TextField label="Image URL" name="imageUrl" />
           <Buttons>
             {initialValues.id && (
               <Button
@@ -80,7 +82,7 @@ export const Form = ({
                 disabled={!initialValues.id}
                 variant="secondary"
               >
-                {initialValues.isPublished ? "Unpublish" : "Publish"}
+                {initialValues.isPublished ? 'Unpublish' : 'Publish'}
               </Button>
             )}
             <Button
@@ -88,7 +90,7 @@ export const Form = ({
               isLoading={isSubmitting}
               data-testid="entry-form-submit"
             >
-              {initialValues.id ? "Update" : "Create"}
+              {initialValues.id ? 'Update' : 'Create'}
             </Button>
           </Buttons>
           {submitError && <ErrorMessage>{submitError}</ErrorMessage>}

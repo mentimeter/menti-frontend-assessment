@@ -1,11 +1,11 @@
-import { X } from "lucide-react";
-import { useRouter } from "next/router";
-import React, { useCallback } from "react";
-import { useEntry } from "../../hooks/useEntry";
-import { Container, CloseButton, LoadingState, Spinner } from "./styles";
-import { useEntryActions } from "../../hooks/useEntryAction";
-import { Form } from "./Form";
-import type { FormFields } from "./Form";
+import { X } from 'lucide-react';
+import { useRouter } from 'next/router';
+import React, { useCallback } from 'react';
+import { useEntry } from '../../hooks/useEntry';
+import { Container, CloseButton, LoadingState, Spinner } from './styles';
+import { useEntryActions } from '../../hooks/useEntryAction';
+import { Form } from './Form';
+import type { FormFields } from './Form';
 
 interface Props {
   className?: string;
@@ -32,12 +32,14 @@ export const Entry = ({ className }: Props) => {
       ? await handleCreateEntry({
           title: values.title,
           description: values.description,
+          imageUrl: values.imageUrl,
           isPublished: false,
         })
       : await handleUpdateEntry({
           id: values.id,
           title: values.title,
           description: values.description,
+          imageUrl: values.imageUrl,
           isPublished: false,
         });
 
@@ -55,16 +57,17 @@ export const Entry = ({ className }: Props) => {
     replace({ query: null });
   }, [replace, handleRemoveEntry, entry?.id]);
 
-  const cardTitle = entry?.title ? `Update ${entry.title}` : "Create new entry";
+  const cardTitle = entry?.title ? `Update ${entry.title}` : 'Add new pup';
   const initialValues: FormFields = {
-    id: entry?.id || "",
-    title: entry?.title || "",
-    description: entry?.description || "",
+    id: entry?.id || '',
+    title: entry?.title || '',
+    description: entry?.description || '',
+    imageUrl: entry?.imageUrl || '',
     isPublished: Boolean(entry?.isPublished),
   };
 
   return (
-    <Container title={isValidating ? "" : cardTitle} className={className}>
+    <Container title={isValidating ? '' : cardTitle} className={className}>
       <CloseButton href="/" shallow>
         <X />
       </CloseButton>

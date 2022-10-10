@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { HEADER_HEIGHT } from "./constants";
+import styled from 'styled-components';
+import { HEADER_HEIGHT } from './constants';
 
 export const Container = styled.div`
   height: ${HEADER_HEIGHT};
@@ -22,4 +22,15 @@ export const Content = styled.div`
 
 export const Actions = styled.div`
   margin-left: 2rem;
+`;
+
+export const Heading = styled.h1`
+  font-family: MentiDisplay;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+
+  & > .title {
+    margin-left: 1rem;
+  }
 `;

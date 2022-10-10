@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
-import { Entries } from "../Entries/Entries";
-import { Layout } from "../../components/Layout/Layout";
-import { Container, Entry, CreateEntry } from "./styles";
+import { useRouter } from 'next/router';
+import { Entries } from '../Entries/Entries';
+import { Layout } from '../../components/Layout/Layout';
+import { Container, Entry, CreateEntry } from './styles';
 
 export const Dashboard = () => {
   const { query } = useRouter();
@@ -11,7 +11,7 @@ export const Dashboard = () => {
     <Layout
       headerActions={
         <CreateEntry replace shallow href="?create=true">
-          Create New Entry
+          Add new Pup
         </CreateEntry>
       }
     >

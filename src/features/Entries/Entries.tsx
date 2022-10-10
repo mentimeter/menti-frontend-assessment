@@ -1,6 +1,6 @@
-import { Container, EmptyState, List, LoadingState, Spinner } from "./styles";
-import { Row } from "./Row/Row";
-import { useEntries } from "../../hooks/useEntries";
+import { Container, EmptyState, List, LoadingState, Spinner } from './styles';
+import { Row } from './Row/Row';
+import { useEntries } from '../../hooks/useEntries';
 
 interface Props {
   className?: string;
@@ -12,22 +12,23 @@ export const Entries = ({ className }: Props) => {
   const isEmpty = entries.length === 0 && !isLoading;
 
   return (
-    <Container title="Entries" className={className}>
+    <Container title="Pups" className={className}>
       {isLoading && (
         <LoadingState>
           <Spinner size={4} />
         </LoadingState>
       )}
-      {isEmpty && <EmptyState>There are no entries yet</EmptyState>}
+      {isEmpty && <EmptyState>There are no pups yet</EmptyState>}
       {!isLoading && !isEmpty && (
         <List>
-          {entries?.map(({ id, title, description, isPublished }) => (
+          {entries?.map(({ id, title, description, isPublished, imageUrl }) => (
             <Row
               id={id}
               key={id}
               title={title}
               description={description}
               isPublished={isPublished}
+              imageUrl={imageUrl}
             />
           ))}
         </List>
