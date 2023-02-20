@@ -1,7 +1,7 @@
-import { HTMLInputTypeAttribute, useRef } from "react";
-import type { ChangeEvent } from "react";
-import { useField } from "formik";
-import { Container, Input, Label, ErrorMessage } from "./styles";
+import { FocusEvent, HTMLInputTypeAttribute, useRef } from 'react';
+import type { ChangeEvent } from 'react';
+import { useField } from 'formik';
+import { Container, Input, Label, ErrorMessage } from './styles';
 
 interface Props {
   className?: string;
@@ -31,6 +31,12 @@ export const TextField = ({
     setValue(e.target.value);
   };
 
+  // Handle blur event to set the value, since handleChange is not invoked on paste
+  const handleBlur = (e) => {
+    e.preventDefault();
+    setValue(e.target.value);
+  };
+
   const showError = touched && Boolean(error);
 
   return (
@@ -39,11 +45,9 @@ export const TextField = ({
         className={className}
         $hasError={showError}
         $isDisabled={Boolean(disabled)}
-        onClick={() => {
-          inputRef.current?.focus();
-        }}
+        onBlur={handleBlur}
       >
-        <Label>{label}</Label>
+        <Label htmlFor={label}>{label}</Label>
         <Input
           id={id}
           name={name}

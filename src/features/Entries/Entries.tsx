@@ -21,16 +21,19 @@ export const Entries = ({ className }: Props) => {
       {isEmpty && <EmptyState>There are no pups yet</EmptyState>}
       {!isLoading && !isEmpty && (
         <List>
-          {entries?.map(({ id, title, description, isPublished, imageUrl }) => (
-            <Row
-              id={id}
-              key={id}
-              title={title}
-              description={description}
-              isPublished={isPublished}
-              imageUrl={imageUrl}
-            />
-          ))}
+          {entries?.map(
+            ({ id, age, title, description, isPublished, imageUrl }) => (
+              <Row
+                id={id}
+                key={id}
+                title={title}
+                age={age}
+                description={description}
+                isPublished={isPublished}
+                imageUrl={imageUrl}
+              />
+            ),
+          )}
         </List>
       )}
     </Container>

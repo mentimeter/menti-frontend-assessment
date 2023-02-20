@@ -31,6 +31,7 @@ export const Entry = ({ className }: Props) => {
     const result = isCreate
       ? await handleCreateEntry({
           title: values.title,
+          age: Number(values.age),
           description: values.description,
           imageUrl: values.imageUrl,
           isPublished: false,
@@ -38,6 +39,7 @@ export const Entry = ({ className }: Props) => {
       : await handleUpdateEntry({
           id: values.id,
           title: values.title,
+          age: Number(values.age),
           description: values.description,
           imageUrl: values.imageUrl,
           isPublished: false,
@@ -61,6 +63,7 @@ export const Entry = ({ className }: Props) => {
   const initialValues: FormFields = {
     id: entry?.id || '',
     title: entry?.title || '',
+    age: entry?.age.toString() || '0',
     description: entry?.description || '',
     imageUrl: entry?.imageUrl || '',
     isPublished: Boolean(entry?.isPublished),

@@ -3,6 +3,7 @@
     {
       "id": "14mh41ahnco",
       "title": "Ragnar",
+      "age": 5,
       "description": "Deputy Physical Security Manager",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/4GwKzXQVgvoCA5j5G5vEb5/48c1d9626192b736c157fb57a74b6f8b/ragnar.png?w=100&fm=webp",
       "isPublished": false
@@ -10,12 +11,14 @@
     {
       "id": "kklh0u55s7",
       "title": "Ville",
+      "age": 4,
       "description": "Head Revenue Assurance",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/1ngQSYXkI2tD3lpPsKgvdQ/2f70bf1631f9cc1e1e6cc281e3af4ed9/ville-c.png?w=100&fm=webp",
       "isPublished": false
     },
     {
       "title": "Penelope",
+      "age": 7,
       "description": "Head of Growth Hacking",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/2SFlsxiwu8TFfNSqkEEBzA/96b995df3a06ea389ab29f56fc01d764/penelope.png?w=100&fm=webp",
       "isPublished": false,
@@ -23,6 +26,7 @@
     },
     {
       "title": "Boris",
+      "age": 2,
       "description": "Lead Brand Enforcement",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/2Pabt1vAq216l8qnp7A9WT/4db15877c565038b3d4095a400bfedbb/boris-r.png?w=100&fm=webp",
       "isPublished": false,
@@ -30,6 +34,7 @@
     },
     {
       "title": "Douglas",
+      "age": 9,
       "description": "Retired Head of Cybersecurity",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/2Re3xADQ5Ikf9uHlnTmODG/0b4ede61e01801aaa081f5f5dbb02a53/douglas.png?w=100&fm=webp",
       "isPublished": false,
@@ -37,6 +42,7 @@
     },
     {
       "title": "Kostas",
+      "age": 3,
       "description": "Branch Manager",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/2kXVDTaPIAwRagesS6IeaB/e81972a1040cc35ee918c53f20ad2a1f/kostas.png?w=100&fm=webp",
       "isPublished": false,
@@ -44,6 +50,7 @@
     },
     {
       "title": "Murphy",
+      "age": 2,
       "description": "Belly Rub Acquisition Specialist",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/1W4wRZ48N97V8mavFaesCp/cbe8fa47eb31e05ce765870015bcf2cb/Murphy.png?w=100&fm=webp",
       "isPublished": false,
@@ -51,6 +58,7 @@
     },
     {
       "title": "Brownie",
+      "age": 5,
       "description": "Head of Joy",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/7gpq8AjawwkIAUXgU5LSve/711fd38794b6eb9a3508928f9569a70b/Bernie.png?w=100&fm=webp",
       "isPublished": false,
@@ -58,6 +66,7 @@
     },
     {
       "title": "Kirby",
+      "age": 4,
       "description": "Head of Floof",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/TcNOI1oZ0AXkNyBrjdVPd/3eecbc1de83e12e024a79642e11082aa/Kirby.png?w=100&fm=webp",
       "isPublished": false,
@@ -65,6 +74,7 @@
     },
     {
       "title": "Leia",
+      "age": 4,
       "description": "Deputy Data Dog",
       "imageUrl": "https://images.ctfassets.net/rvt0uslu5yqp/74RdaycnnPWLUDuKZAxTvR/5b9d2d54c0da46b0d580a81cea251655/Leia-j.png?w=100&fm=webp",
       "isPublished": false,
