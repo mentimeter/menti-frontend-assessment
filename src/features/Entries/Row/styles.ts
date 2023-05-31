@@ -75,6 +75,7 @@ export const Badge = styled.div`
   border-radius: 4px;
   font-weight: bold;
   background: ${({ theme }) => theme.colors.blueLight};
+  margin-left: 0.6rem;
 `;
 
 export const Title = styled.div`
@@ -103,7 +104,14 @@ export const ActionButton = styled.div`
   align-items: center;
   justify-content: center;
   transition: background-color 100ms ease-in;
+  opacity: 0.8;
+
+  &.disabled {
+    opacity: 0.3;
+  }
+
   &:hover {
+    opacity: 1;
     background-color: rgba(0, 0, 0, 0.1);
   }
 `;

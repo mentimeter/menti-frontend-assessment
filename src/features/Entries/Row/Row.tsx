@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUp, Trash2 } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useCallback } from 'react';
+import { useCallback, memo } from 'react';
 import { useEntryActions } from '../../../hooks/useEntryAction';
 import {
   Actions,
@@ -18,20 +18,29 @@ import {
 interface Props {
   id: string;
   title: string;
+  age: number;
   description: string;
   imageUrl?: string;
   isPublished: boolean;
 }
 
-export const Row = ({
+const _Row = ({
   id,
   title,
+  age,
   isPublished,
   description,
   imageUrl,
 }: Props) => {
   const { push } = useRouter();
-  const { handleRemoveEntry, handlePublishEntry } = useEntryActions();
+  const {
+    handleRemoveEntry,
+    handlePublishEntry,
+    isLoadingCreate,
+    isLoadingPublish,
+    isLoadingRemove,
+    isLoadingUpdate,
+  } = useEntryActions();
 
   const handleRemoveClick = useCallback(
     () => handleRemoveEntry(id),
@@ -40,13 +49,19 @@ export const Row = ({
 
   const handlePublishClick = useCallback(
     () =>
-      handlePublishEntry({ id, title, description, isPublished }, !isPublished),
+      handlePublishEntry(
+        { id, age, title, description, isPublished },
+        !isPublished,
+      ),
     [handlePublishEntry, id, title, description, isPublished],
   );
 
   const handleClick = useCallback(() => {
     push(`/?id=${id}`);
   }, [id, push]);
+
+  const isLoading =
+    isLoadingCreate || isLoadingPublish || isLoadingRemove || isLoadingUpdate;
 
   return (
     <Container>
@@ -58,18 +73,28 @@ export const Row = ({
           <Heading>
             <Title>{title}</Title>
             <Badge>ID: {id}</Badge>
+            <Badge>Age {age}</Badge>
           </Heading>
           <Description>{description}</Description>
         </ContentInnerWrapper>
       </Content>
       <Actions>
-        <ActionButton onClick={handlePublishClick}>
+        <ActionButton
+          onClick={!isLoading ? handlePublishClick : null}
+          className={isLoading ? 'disabled' : ''}
+        >
           {isPublished ? <ArrowDown /> : <ArrowUp />}
         </ActionButton>
-        <ActionButton onClick={handleRemoveClick}>
+        <ActionButton
+          onClick={!isLoading ? handleRemoveClick : null}
+          className={isLoading ? 'disabled' : ''}
+        >
           <Trash2 />
         </ActionButton>
       </Actions>
     </Container>
   );
 };
+
+// This component will likely be rendered like A LOT so lets be safe and memoize it
+export const Row = memo(_Row);

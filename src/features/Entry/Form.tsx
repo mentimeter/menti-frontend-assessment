@@ -8,6 +8,7 @@ import { validationSchema } from './constants';
 export interface FormFields {
   id: string;
   isPublished: boolean;
+  age: string;
   title: string;
   imageUrl?: string;
   description: string;
@@ -58,6 +59,7 @@ export const Form = ({
         <FormikForm>
           <FormRow>
             <TextField label="Title" name="title" />
+            <TextField label="Age" name="age" />
             <TextField label="Id" name="id" disabled />
           </FormRow>
           <TextField label="Description" name="description" />
