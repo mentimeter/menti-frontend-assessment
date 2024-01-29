@@ -2,13 +2,7 @@
 
 ## Getting Started
 
-First, make a copy of the dev data
-
-```bash
-cp -n data.json.default data.json
-```
-
-Second, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
