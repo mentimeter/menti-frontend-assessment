@@ -6,7 +6,8 @@
     "dev": "cp data.json.default data.json && next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "next lint",
+    "tc": "tsc --noEmit",
     "format": "biome check --write",
     "test": "jest"
   },
