@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import type { ReactNode } from 'react';
-import { Logo } from '../Logo/Logo';
-import { Container, Content, Actions, Heading } from './styles';
+import { ReactNode } from 'react';
+import { Actions, Container, Content, Heading } from './styles';
 
 type Props = { children: ReactNode };
 

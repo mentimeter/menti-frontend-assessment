@@ -39,11 +39,7 @@ describe('Entry/Form', () => {
     const submitButton = screen.queryByTestId('entry-form-submit');
     await userEvent.click(submitButton);
 
-    await waitFor(() =>
-      expect(
-        screen.getByText(VALIDATION_SCHEMA_TEXTS.title.required),
-      ).toBeInTheDocument(),
-    );
+    await screen.findByText(VALIDATION_SCHEMA_TEXTS.title.required);
     expect(
       screen.getByText(VALIDATION_SCHEMA_TEXTS.description.required),
     ).toBeInTheDocument();
@@ -85,8 +81,8 @@ describe('Entry/Form', () => {
     const submitButton = screen.queryByTestId('entry-form-submit');
     expect(submitButton.textContent).toMatch('Update');
 
-    expect(screen.queryByTestId('entry-form-publish')).toBeInTheDocument();
-    expect(screen.queryByTestId('entry-form-remove')).toBeInTheDocument();
+    expect(screen.getByTestId('entry-form-publish')).toBeInTheDocument();
+    expect(screen.getByTestId('entry-form-remove')).toBeInTheDocument();
   });
 
   it('should call handleSubmit with form fields when submit button is clicked', async () => {
@@ -102,7 +98,7 @@ describe('Entry/Form', () => {
     );
 
     const submitButton = screen.queryByTestId('entry-form-submit');
-    userEvent.click(submitButton);
+    await userEvent.click(submitButton);
 
     await waitFor(() =>
       expect(handleSubmit).toHaveBeenCalledWith(filledFormFields),
@@ -122,7 +118,7 @@ describe('Entry/Form', () => {
     );
 
     const removeButton = screen.queryByTestId('entry-form-remove');
-    userEvent.click(removeButton);
+    await userEvent.click(removeButton);
 
     await waitFor(() => expect(handleRemove).toHaveBeenCalled());
   });
