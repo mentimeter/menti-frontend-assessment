@@ -17,10 +17,10 @@ export const Link = ({
   ...props
 }: Props) => {
   return (
-    <NextLink passHref {...props}>
+    (<NextLink passHref {...props} legacyBehavior>
       <A $variant={variant} className={className} disabled={disabled}>
         {children}
       </A>
-    </NextLink>
+    </NextLink>)
   );
 };

@@ -7,7 +7,7 @@ const Providers = ({ children }: { children: ReactNode }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 
-const customRender = (ui: React.ReactElement, options?: RenderOptions) =>
+const customRender = (ui: React.ReactElement<any>, options?: RenderOptions) =>
   render(ui, { wrapper: Providers, ...options });
 
 export { customRender as render };
