@@ -1,7 +1,7 @@
-import { useSWRConfig } from "swr";
-import { useState } from "react";
-import { Entry } from "../models";
-import { getEntriesUrl, getEntryUrl } from "./routes";
+import { useSWRConfig } from 'swr';
+import { useState } from 'react';
+import type { Entry } from '../models';
+import { getEntriesUrl, getEntryUrl } from './routes';
 
 export const useEntryActions = () => {
   const { mutate } = useSWRConfig();
@@ -13,9 +13,9 @@ export const useEntryActions = () => {
   const handleUpdateEntry = async (entry: Entry) => {
     setIsLoadingUpdate(true);
     const response = await fetch(getEntryUrl(entry.id), {
-      method: "PUT",
+      method: 'PUT',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(entry),
     });
@@ -30,15 +30,15 @@ export const useEntryActions = () => {
     }
     setIsLoadingUpdate(false);
 
-    throw new Error("Error updating entry");
+    throw new Error('Error updating entry');
   };
 
-  const handleCreateEntry = async (entry: Omit<Entry, "id">) => {
+  const handleCreateEntry = async (entry: Omit<Entry, 'id'>) => {
     setIsLoadingCreate(true);
     const response = await fetch(getEntriesUrl(), {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(entry),
     });
@@ -53,14 +53,14 @@ export const useEntryActions = () => {
     }
     setIsLoadingCreate(false);
 
-    throw new Error("Error creating entry");
+    throw new Error('Error creating entry');
   };
 
   const handleRemoveEntry = async (id: string) => {
     setIsLoadingRemove(true);
 
     const response = await fetch(getEntryUrl(id), {
-      method: "DELETE",
+      method: 'DELETE',
     });
 
     if (response.ok) {
@@ -70,7 +70,7 @@ export const useEntryActions = () => {
     }
 
     setIsLoadingRemove(false);
-    throw new Error("Error removing entry");
+    throw new Error('Error removing entry');
   };
 
   const handlePublishEntry = async (entry: Entry, isPublished = true) => {

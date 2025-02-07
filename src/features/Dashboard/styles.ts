@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link } from "../../components/Link/Link";
-import { Entry as DefaultEntry } from "../Entry/Entry";
+import styled from 'styled-components';
+import { Link } from '../../components/Link/Link';
+import { Entry as DefaultEntry } from '../Entry/Entry';
 
 export const Container = styled.div`
   align-items: flex-start;
@@ -21,4 +21,4 @@ export const Entry = styled(DefaultEntry)`
   min-width: 22rem;
 `;
 
-export const CreateEntry = styled(Link).attrs(() => ({ variant: "button" }))``;
+export const CreateEntry = styled(Link).attrs(() => ({ variant: 'button' }))``;

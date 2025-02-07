@@ -1,8 +1,8 @@
-import styled, { css } from "styled-components";
-import type { Props } from "./Button";
+import styled, { css } from 'styled-components';
+import type { Props } from './Button';
 
 export const Container = styled.button<{
-  $variant: Props["variant"];
+  $variant: Props['variant'];
   disabled?: boolean;
 }>`
   border-radius: 6px;
@@ -23,13 +23,13 @@ export const Container = styled.button<{
   transition: all ease-in 100ms;
 
   ${({ $variant }) => {
-    if ($variant === "secondary") {
+    if ($variant === 'secondary') {
       return css`
         background: ${({ theme }) => theme.colors.green};
       `;
     }
 
-    if ($variant === "warning") {
+    if ($variant === 'warning') {
       return css`
         background: ${({ theme }) => theme.colors.pinkDark};
       `;

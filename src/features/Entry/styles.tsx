@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { Button as DefaultButton } from "../../components/Button/Button";
-import { Link } from "../../components/Link/Link";
-import { Card as DefaultCard } from "../../components/Card/Card";
-import { TextWrap } from "../../lib/mixins";
-import { Spinner as DefaultSpinner } from "../../components/Spinner/Spinner";
+import styled from 'styled-components';
+import { Button as DefaultButton } from '../../components/Button/Button';
+import { Link } from '../../components/Link/Link';
+import { Card as DefaultCard } from '../../components/Card/Card';
+import { TextWrap } from '../../lib/mixins';
+import { Spinner as DefaultSpinner } from '../../components/Spinner/Spinner';
 
 export const Container = styled(DefaultCard)`
   position: relative;

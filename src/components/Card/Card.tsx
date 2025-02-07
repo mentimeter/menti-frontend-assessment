@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { Container, Title } from "./styles";
+import type { ReactNode } from 'react';
+import { Container, Title } from './styles';
 
 interface Props {
   className?: string;

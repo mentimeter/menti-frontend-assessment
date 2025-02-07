@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import { Entry } from '../models';
+import type { Entry } from '../models';
 import { getEntryUrl } from './routes';
 
 export const useEntry = (id: string) => {

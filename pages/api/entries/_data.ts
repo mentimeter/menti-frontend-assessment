@@ -1,6 +1,6 @@
-import { Entry } from '../../../src/models';
-import { readFile as r, writeFile as w } from 'fs';
-import { promisify } from 'util';
+import type { Entry } from '../../../src/models';
+import { readFile as r, writeFile as w } from 'node:fs';
+import { promisify } from 'node:util';
 
 const PROJECT_ROOT = process.cwd();
 

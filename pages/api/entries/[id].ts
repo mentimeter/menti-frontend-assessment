@@ -1,10 +1,10 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { Entry } from '../../../src/models';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { Entry } from '../../../src/models';
 import { getData, writeData } from './_data';
 
 const mockLoadingTime = () => {
-  return new Promise(function (resolve) {
-    setTimeout(function () {
+  return new Promise((resolve) => {
+    setTimeout(() => {
       resolve(null);
     }, 600);
   });

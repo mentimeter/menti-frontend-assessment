@@ -1,3 +1,3 @@
-export const useMatch = (breakpoint: string) => {
+export const useMatch = () => {
   return {};
 };

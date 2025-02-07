@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TextWrap } from "../../lib/mixins";
+import styled from 'styled-components';
+import { TextWrap } from '../../lib/mixins';
 
 export const Container = styled.div`
   display: flex;

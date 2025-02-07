@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { HEADER_HEIGHT } from "../Header/constants";
+import styled from 'styled-components';
+import { HEADER_HEIGHT } from '../Header/constants';
 
 export const Container = styled.div`
   height: 100vh;
