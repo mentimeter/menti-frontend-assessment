@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import { Card as DefaultCard } from "../../components/Card/Card";
-import { Spinner as DefaultSpinner } from "../../components/Spinner/Spinner";
+import styled from 'styled-components';
+import { Card as DefaultCard } from '../../components/Card/Card';
+import { Spinner as DefaultSpinner } from '../../components/Spinner/Spinner';
 
 export const Container = styled(DefaultCard)`
   max-width: 52rem;

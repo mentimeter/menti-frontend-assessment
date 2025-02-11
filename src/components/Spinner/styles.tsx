@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components";
-import { Loader2 } from "lucide-react";
+import styled, { keyframes } from 'styled-components';
+import { Loader2 } from 'lucide-react';
 
 const rotateAnimation = keyframes`
   from {

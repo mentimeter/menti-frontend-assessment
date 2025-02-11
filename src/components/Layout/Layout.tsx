@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
-import { Header } from "../Header/Header";
-import { Container, Content } from "./styles";
+import type { ReactNode } from 'react';
+import { Header } from '../Header/Header';
+import { Container, Content } from './styles';
 
 export const Layout = ({
   headerActions,

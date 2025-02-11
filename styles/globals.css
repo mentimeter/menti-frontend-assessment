@@ -2,7 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family:
+    -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -18,45 +19,45 @@ a {
 @font-face {
   font-display: swap;
   font-weight: 400;
-  src: url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.eot')
-      format('embedded-opentype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.otf')
-      format('opentype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.ttf')
-      format('truetype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.woff')
-      format('woff'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.woff2')
-      format('woff2');
-  font-family: 'MentiDisplay';
+  src: url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.eot")
+    format("embedded-opentype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.otf")
+    format("opentype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.ttf")
+    format("truetype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.woff")
+    format("woff"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Regular.woff2")
+    format("woff2");
+  font-family: "MentiDisplay";
 }
 @font-face {
   font-display: swap;
   font-weight: 600;
-  src: url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.eot')
-      format('embedded-opentype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.otf')
-      format('opentype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.ttf')
-      format('truetype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.woff')
-      format('woff'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.woff2')
-      format('woff2');
-  font-family: 'MentiDisplay';
+  src: url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.eot")
+    format("embedded-opentype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.otf")
+    format("opentype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.ttf")
+    format("truetype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.woff")
+    format("woff"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-SemiBold.woff2")
+    format("woff2");
+  font-family: "MentiDisplay";
 }
 @font-face {
   font-display: swap;
   font-weight: 700;
-  src: url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.eot')
-      format('embedded-opentype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.otf')
-      format('opentype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.ttf')
-      format('truetype'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.woff')
-      format('woff'),
-    url('https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.woff2')
-      format('woff2');
-  font-family: 'MentiDisplay';
+  src: url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.eot")
+    format("embedded-opentype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.otf")
+    format("opentype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.ttf")
+    format("truetype"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.woff")
+    format("woff"),
+    url("https://static.mentimeter.com/static/fonts/web/menti-display/1.4/MentiDisplay-Bold.woff2")
+    format("woff2");
+  font-family: "MentiDisplay";
 }

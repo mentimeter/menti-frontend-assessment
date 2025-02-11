@@ -1,7 +1,7 @@
-import { HTMLInputTypeAttribute, useRef } from "react";
-import type { ChangeEvent } from "react";
-import { useField } from "formik";
-import { Container, Input, Label, ErrorMessage } from "./styles";
+import { type HTMLInputTypeAttribute, useRef } from 'react';
+import type { ChangeEvent } from 'react';
+import { useField } from 'formik';
+import { Container, Input, Label, ErrorMessage } from './styles';
 
 interface Props {
   className?: string;
